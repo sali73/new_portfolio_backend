@@ -1,6 +1,3 @@
-from django.db import models
-
-# Create your models here.
 # Create your models here.
 from django.db import models
 from django.utils.text import slugify
@@ -12,7 +9,7 @@ class Project(models.Model):
     image = models.CharField(max_length=400)
     slug = models.SlugField(null=True, blank=True)
     def __str__(self):
-        return '%s' % (self.title)
+        return '%s %s %s %s %s ' % (self.backend, self.title, self.frontend, self.deployment, self.image)
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)[:50]
@@ -23,4 +20,4 @@ class Note(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     def __str__(self):
-        return "%s" % (self.title)
+        return "%s %s" % (self.title, self.body)
