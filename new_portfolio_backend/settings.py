@@ -30,8 +30,7 @@ SECRET_KEY = '_gv*#ub+m*mv+m$*war%55f9fe_k4mm@i8x5758byr7e6kx+b5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['142.93.253.51', '127.0.0.1', 'localhost:3000' , 'localhost', 'salimohamed.me ','https://github.com/sali73/new_portfolio_backend.git
-']
+ALLOWED_HOSTS = ['142.93.253.51', '127.0.0.1', 'localhost:3000' , 'localhost', 'salimohamed.me ','https://new-portfolio-django-backend.herokuapp.com/ ']
 
 
 # Application definition
