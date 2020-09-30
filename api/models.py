@@ -8,6 +8,7 @@ class Project(models.Model):
     deployment = models.CharField(max_length=400)
     image = models.CharField(max_length=400)
     slug = models.SlugField(null=True, blank=True)
+    details = models.CharField(max_length=900, null=True, blank=True )
     def __str__(self):
         return '%s %s %s %s %s ' % (self.backend, self.title, self.frontend, self.deployment, self.image)
     def save(self, *args, **kwargs):
